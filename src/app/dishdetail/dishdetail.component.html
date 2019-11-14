@@ -32,11 +32,9 @@
         </mat-card-title>
       </mat-card-header>
       <mat-card-content *ngFor="let comments of dish.comments">
-        <p>
-          {{comments.comment}} <br>
-          {{comments.rating}} stars <br>
-          -- {{comments.author}} {{comments.date | date}}
-        </p>
+        <mat-list-item>{{comments.comment}}</mat-list-item>
+        <mat-list-item>{{comments.rating}} stars</mat-list-item>
+        <mat-list-item>-- {{comments.author}} {{comments.date | date}}</mat-list-item>
       </mat-card-content>
     </mat-card>
   </div>
