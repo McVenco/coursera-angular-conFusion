@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
     this.feedbackForm = this.fb.group({
       firstname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
       lastname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
-      telnum: [0, [Validators.required, Validators.pattern]],
+      telnum: ['', [Validators.required, Validators.pattern]],
       email: ['', [Validators.required, Validators.email]],
       agree: false,
       contacttype: 'None',
@@ -92,7 +92,7 @@ export class ContactComponent implements OnInit {
     this.feedbackForm.reset({
       firstname: '',
       lastname: '',
-      telnum: 0,
+      telnum: '',
       email: '',
       agree: false,
       contacttype: 'None',
