@@ -15,6 +15,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DishdetailComponent implements OnInit {
 
   dish: Dish;
+  errMess: string;
   dishIds: string[];
   prev: string;
   next: string;
@@ -55,7 +56,8 @@ export class DishdetailComponent implements OnInit {
         this.dish = dish;
         this.setPrevNext(dish.id);
         this.new_comments_array = dish;
-      });
+      },
+        errmess => this.errMess = <any>errmess);
   }
 
   createForm() {
