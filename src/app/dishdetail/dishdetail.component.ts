@@ -23,7 +23,6 @@ export class DishdetailComponent implements OnInit {
   @ViewChild('fform') commentFormDirective;
   comment: Comment;
   commentForm: FormGroup;
-  new_comments_array = null;
 
   dishcopy: Dish;
   
@@ -60,7 +59,6 @@ export class DishdetailComponent implements OnInit {
         this.dish = dish;
         this.dishcopy = dish;
         this.setPrevNext(dish.id);
-        this.new_comments_array = dish;
       },
         errmess => this.errMess = <any>errmess);
   }
